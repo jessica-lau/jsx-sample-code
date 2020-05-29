@@ -16,35 +16,39 @@ function App() {
           we will learn how this works in a few more lessons! */}
                 {suggestedFriends.map(friend => (
                     <div className="card">
+                        <img className="picture" src={friend.picture} alt="user profile" />
                         {/* add a self closing img element with:
               - "picture" as the value for the className attribute
               - the friend.picture variable as the value for the src attribute
               - "user profile" as the value for the alt attribute
               */}
-                        {/* add an opening div tag with:
+                        <div className="card-text">
+                            {/* add an opening div tag with:
               - "card-text" as the value for the className attribute
               */}
-                        {/* add an h5 element with:
+                            <h5 className="username">{friend.name}</h5>
+                            {/* add an h5 element with:
               - "username" as the value for the className attribute
               - a JSX expression with the variable friend.name between 
               - the h5 tags, and don't forget to use curly braces between it!
-              */}
-                        {/* add a span element with:
+              */}       <span className="mutual-friends">{friend.mutualFriendCount} mutual friends</span>
+                            {/* add a span element with:
               - "mutual-friends" as the value for the className attribute
               - a JSX expression with `{friend.mutualFriendCount} mutual 
               - friends` between the span tags
-              */}
-                        {/* add an opening div tag with:
+              */}           <div className="card-actions">
+                                {/* add an opening div tag with:
               - "card-actions" as the value for the className attribute
-              */}
-                        {/* add a button element with:
+              */}               <button className="primary">Add Friend</button>
+                                {/* add a button element with:
                 - "primary" as the value for the className attribute
                 - the text `Add Friend` between the button tags
-                */}
-                        {/* add a button element with:
+                */}             <button>Remove</button>
+                                {/* add a button element with:
                 - the text `Remove` between the button tags
-                */}
-                        {/* add a closing div tag */}
+                */}         </div>
+                            {/* add a closing div tag */}
+                        </div>
                         {/* add a closing div tag */}
                     </div>
                 ))}
